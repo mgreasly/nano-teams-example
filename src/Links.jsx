@@ -4,5 +4,6 @@ export default () => (
     <ul>
         <li><a href='/'>Index</a></li>
         <li><a href='/tab.html'>Tab</a></li>
+        <li><a href='/todo.html'>Todo</a></li>
     </ul>
 );

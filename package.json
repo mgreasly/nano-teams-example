@@ -17,8 +17,9 @@
     "babel-preset-nano-react-app": "^0.1.0",
     "react-spring": "^9.4.5",
     "react-use-gesture": "5.0.0",
+    "redux-zero": "^5.1.7",
     "vite": "^2.9.10"
-},
+  },
   "babel": {
     "presets": [
       "nano-react-app"

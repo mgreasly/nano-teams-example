@@ -8,6 +8,7 @@ module.exports = defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 tab: resolve(__dirname, 'tab.html'),
+                todo: resolve(__dirname, 'todo.html'),
                 configure: resolve(__dirname, 'configure.html')
             }
         }
