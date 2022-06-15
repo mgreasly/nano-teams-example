@@ -1,0 +1,49 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.5",
+    "version": "1.0.0",
+    "id": "c34c2054-c1c6-468b-a71f-f8e7ff3f8f9c",
+    "packageName": "com.mgreasly.nano-teams-example",
+    "developer": {
+        "name": "mgreasly",
+        "websiteUrl": "https://www.microsoft.com",
+        "privacyUrl": "https://www.microsoft.com/privacy",
+        "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+    },
+    "name": {
+        "short": "Nano Teams Example App",
+        "full": "Nano Teams Example App"
+    },
+    "description": {
+        "short": "Nano Example App for Microsoft Teams",
+        "full": "Example using React to provide a Teams app with multiple tabs."
+    },
+    "icons": {
+        "outline": "teams32.png",
+        "color": "teams192.png"
+    },
+    "accentColor": "#60a18e",
+    "staticTabs": [
+        {
+            "entityId": "com.mgreasly.nano-teams-Example.tab",
+            "name": "Home Tab",
+            "contentUrl": "https://soft-chimera-34d777.netlify.app/",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://soft-chimera-34d777.netlify.app/configure.html",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "bots": [],
+    "composeExtensions": [],
+    "permissions": [],
+    "validDomains": []
+}
