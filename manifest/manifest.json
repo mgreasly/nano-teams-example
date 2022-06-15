@@ -27,7 +27,7 @@
         {
             "entityId": "com.mgreasly.nano-teams-Example.tab",
             "name": "Home Tab",
-            "contentUrl": "https://soft-chimera-34d777.netlify.app/",
+            "contentUrl": "https://stately-fox-fdc0dc.netlify.app/",
             "scopes": [
                 "personal"
             ]
@@ -35,7 +35,7 @@
     ],
     "configurableTabs": [
         {
-            "configurationUrl": "https://soft-chimera-34d777.netlify.app/configure.html",
+            "configurationUrl": "https://stately-fox-fdc0dc.netlify.app/configure.html",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team"
