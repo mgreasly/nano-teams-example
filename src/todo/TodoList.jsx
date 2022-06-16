@@ -1,12 +1,12 @@
 import React from "react";
 import { Flex, List } from '@fluentui/react-northstar';
-import { AcceptIcon, CloseIcon } from '@fluentui/react-icons-northstar';
+import { AcceptIcon, CircleIcon } from '@fluentui/react-icons-northstar';
 
 import { connect } from "redux-zero/react";
 import { actions, mapToProps } from "./store";
 
 const Item = (item, toggleState) => {
-    const media = item.completed ? <AcceptIcon /> : <CloseIcon />;
+    const media = item.completed ? <AcceptIcon /> : <CircleIcon outline />;
     const onClick = () => toggleState(item.id);
     return {
         key: item.id,
