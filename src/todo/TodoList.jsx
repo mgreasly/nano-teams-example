@@ -1,22 +1,32 @@
 import React from "react";
+import { Flex, List } from '@fluentui/react-northstar';
+import { AcceptIcon, CloseIcon } from '@fluentui/react-icons-northstar';
+
 import { connect } from "redux-zero/react";
 import { actions, mapToProps } from "./store";
 
-const Item = ({ item, toggleState }) => {
-    const style = { textDecoration: item.completed ? 'line-through' : '' };
-    return <li style={style}><a href='#' onClick={() => toggleState(item.id)}>{item.id}. {item.title}</a></li>
-}
+const Item = (item, toggleState) => {
+    const media = item.completed ? <AcceptIcon /> : <CloseIcon />;
+    const onClick = () => toggleState(item.id);
+    return {
+        key: item.id,
+        media: media,
+        header: item.title,
+        headerMedia: '',
+        content: 'A todo list item - click to change status',
+        onClick: onClick
+    }
+};
 
 export default connect(mapToProps, actions)(({ todoList, status, toggleCompleted }) => {
+    var items = todoList;
+    switch (status) {
+        case "active": items = items.filter(item => item.completed == false); break;
+        case "completed": items = items.filter(item => item.completed == true); break;
+    }
     return (
-        <ul>
-            {todoList.map(item => {
-                switch (status) {
-                    case 'active': if (!item.completed) return <Item key={item.id} item={item} toggleState={toggleCompleted} />; break;
-                    case 'completed': if (item.completed) return <Item key={item.id} item={item} toggleState={toggleCompleted} />; break;
-                    default: return <Item key={item.id} item={item} toggleState={toggleCompleted} />; break;
-                }
-            })}
-        </ul>
+        <Flex gap="gap.medium" padding="padding.medium">
+            <List items={items.map(item => Item(item, toggleCompleted))} />
+        </Flex>
     )
 });
