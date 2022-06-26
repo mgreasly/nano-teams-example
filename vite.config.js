@@ -6,10 +6,11 @@ module.exports = defineConfig({
     build: {
         rollupOptions: {
             input: {
+                cards: resolve(__dirname, 'cards.html'),
+                configure: resolve(__dirname, 'configure.html'),
                 main: resolve(__dirname, 'index.html'),
                 tab: resolve(__dirname, 'tab.html'),
-                todo: resolve(__dirname, 'todo.html'),
-                configure: resolve(__dirname, 'configure.html')
+                todo: resolve(__dirname, 'todo.html')
             }
         }
     }
