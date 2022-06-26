@@ -6,7 +6,7 @@ export default () => {
     console.log("initialise...");
     const [context, setContext] = useState({});
     teams.app.initialize();
-    app.getContext().then((context) => {
+    teams.app.getContext().then((context) => {
         console.log("context... ");
         console.log(context);
         setContext(context);
