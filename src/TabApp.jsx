@@ -7,10 +7,7 @@ export default () => {
 
     useEffect(() => {
         teams.app.initialize();
-        teams.app.getContext().then((context) => {
-            console.log(context);
-            setContext(context);
-        });
+        teams.app.getContext().then((context) => setContext(context));
     }, []);
 
     return (
