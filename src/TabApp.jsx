@@ -4,7 +4,7 @@ import Links from './Links';
 
 export default () => {
     const [context, setContext] = useState({});
-    const [token, setToken] = useToken(null);
+    const [token, setToken] = useState(null);
 
     useEffect(() => {
         teams.app.initialize();
