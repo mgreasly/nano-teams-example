@@ -10,7 +10,7 @@ export default () => {
         teams.app.initialize();
         teams.app.getContext().then((context) => {
             setContext(context);
-            const t = teams.getAuthToken();
+            const t = teams.authentication.getAuthToken();
             setToken(token);
         });
     }, []);
