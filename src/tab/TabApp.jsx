@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as teams from '@microsoft/teams-js';
-import Links from './Links';
+import Links from '../Links';
 
 export default () => {
     const [context, setContext] = useState({});

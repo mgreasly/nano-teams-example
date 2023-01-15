@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useSprings, animated, interpolate } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
-import '../styles.css';
+import '../../styles.css';
 
 const cards = [
     'https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg',
